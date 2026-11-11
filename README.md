@@ -2,15 +2,28 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Hotel Prince - Hotel Management & Booking System
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A modern, luxurious, and responsive Hotel Management landing page and web application developed from a Figma design using React.js and React Router.
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design:** Fully optimized for desktop, tablet, and mobile views.
+- **Dynamic Routing:** Multi-page experience implemented with `react-router-dom`.
+- **Booking Filter Widget:** Interactive Check-in, Check-out, and Guest selection interface.
+- **Modular Architecture:** Production-ready feature-based directory structure.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, Vite
+- **Routing:** React Router v6
+- **Styling:** Tailwind CSS / CSS3
+- **Icons:** Lucide React
+
+## 📦 Getting Started
+
+To get a local copy up and running, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/rezarajib/hotel-prince-app.git](https://github.com/rezarajib/hotel-prince-app.git)
