@@ -1,4 +1,4 @@
-import CheckAvailabilityForm from '../features/booking/CheckAvailabilityForm';
+// import CheckAvailabilityForm from '../features/booking/CheckAvailabilityForm';
 import heroBanner from '../assets/images/hotelPrinceBanner .jpg';
 
 const Home = () => {
@@ -27,9 +27,9 @@ const Home = () => {
         </div>
 
         {/* Booking Filter Box at the bottom of Hero */}
-        <div className="relative z-10 w-full mt-10">
+        {/* <div className="relative z-10 w-full mt-10">
           <CheckAvailabilityForm />
-        </div>
+        </div> */}
       </section>
 
       {/* Next sections of Home Page will come here */}
