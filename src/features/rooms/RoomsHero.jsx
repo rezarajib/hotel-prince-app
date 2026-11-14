@@ -13,13 +13,15 @@ const RoomsHero = () => {
   };
 
   return (
-    <section className="bg-[#F3F3EC] pt-16 pb-20 px-6 md:px-16 lg:px-24">
+    <section className="bg-[#F3F3EC] pt-28 md:pt-36 pb-24 md:pb-28 px-6 md:px-16 lg:px-24">
       <div className="max-w-5xl mx-auto text-center">
-        <p className="text-[#666666] text-xs md:text-sm mb-2">Book Your Stay</p>
+        <p className="text-[#666666] text-xs md:text-sm tracking-wide mb-3">
+          Book Your Stay
+        </p>
         <h1 className="font-serif text-4xl md:text-5xl lg:text-[58px] text-[#18392B] font-normal leading-tight mb-4">
           Rooms &amp; Stay
         </h1>
-        <p className="text-[#666666] text-xs md:text-[15px] max-w-xl mx-auto leading-relaxed mb-12">
+        <p className="text-[#666666] text-xs md:text-[15px] max-w-xl mx-auto leading-relaxed mb-14">
           Discover comfort, elegance, and exceptional hospitality. Reserve your ideal room for a
           memorable stay at Hotel Prince.
         </p>
@@ -27,7 +29,7 @@ const RoomsHero = () => {
         {/* Check Availability Bar */}
         <form
           onSubmit={handleSearch}
-          className="bg-white rounded-2xl p-5 md:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#EAECE6] grid grid-cols-1 md:grid-cols-4 gap-4 items-end text-left"
+          className="bg-white rounded-2xl p-6 md:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#EAECE6] grid grid-cols-1 md:grid-cols-4 gap-4 items-end text-left"
         >
           <div>
             <label className="block text-[13px] font-medium text-[#111111] mb-2">Check-In</label>
