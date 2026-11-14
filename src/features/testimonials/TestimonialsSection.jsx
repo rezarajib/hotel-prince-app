@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-// ৪.৭ রেটিংয়ের জন্য কাস্টম স্টার কম্পোনেন্ট (৪টি পূর্ণ + ১টি অর্ধেক তারা)
+
 const StarRating = ({ size = 16 }) => {
   return (
     <div className="inline-flex items-center gap-1">
@@ -16,7 +17,7 @@ const StarRating = ({ size = 16 }) => {
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
       ))}
-      {/* ৫ম তারা (অর্ধেক ভরাট + আউটলাইন) */}
+     
       <svg
         width={size}
         height={size}
@@ -42,7 +43,7 @@ const StarRating = ({ size = 16 }) => {
 };
 
 const ReviewCard = ({ review }) => (
-  <div className="bg-white rounded-2xl p-6 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#ECEEE9] w-[310px] sm:w-[350px] shrink-0 flex flex-col justify-between hover:shadow-md transition-all duration-300">
+  <div className="bg-white rounded-2xl p-6 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#ECEEE9] w-[310px] sm:w-[350px] shrink-0 flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
     <div>
       {/* Review Title */}
       <h3 className="font-serif text-[20px] text-[#111111] font-normal leading-snug mb-2">
@@ -115,22 +116,48 @@ const TestimonialsSection = () => {
         </div>
       </div>
 
-      {/* Balanced Staggered 2-Row Cards Layout */}
-      <div className="flex flex-col gap-6 items-center">
-        {/* Row 1 */}
-        <div className="flex items-stretch justify-center gap-6">
-          {rowOneReviews.map((review) => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
-        </div>
+      {/* Infinite Moving Marquee Rows */}
+      {reviews.length > 0 && (
+        <div className="flex flex-col gap-6">
+          
+          {/* Row 1: বাম দিকে চলতে থাকবে (Moves Left Continuously) */}
+          <div className="flex overflow-hidden">
+            <motion.div
+              className="flex gap-6 pr-6 w-max"
+              animate={{ x: ['0%', '-50%'] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: 'loop',
+                duration: 35,
+                ease: 'linear',
+              }}
+            >
+              {[...rowOneReviews, ...rowOneReviews].map((review, index) => (
+                <ReviewCard key={`row1-${review.id}-${index}`} review={review} />
+              ))}
+            </motion.div>
+          </div>
 
-        {/* Row 2 */}
-        <div className="flex items-stretch justify-center gap-6 translate-x-20 md:translate-x-28">
-          {rowTwoReviews.map((review) => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
+          {/* Row 2: ডান দিকে চলতে থাকবে (Moves Right Continuously) */}
+          <div className="flex overflow-hidden">
+            <motion.div
+              className="flex gap-6 pr-6 w-max"
+              animate={{ x: ['-50%', '0%'] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: 'loop',
+                duration: 35,
+                ease: 'linear',
+              }}
+            >
+              {[...rowTwoReviews, ...rowTwoReviews].map((review, index) => (
+                <ReviewCard key={`row2-${review.id}-${index}`} review={review} />
+              ))}
+            </motion.div>
+          </div>
+
         </div>
-      </div>
+      )}
     </section>
   );
 };
