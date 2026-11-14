@@ -4,6 +4,7 @@ import Home from '../pages/home/Home';
 import Rooms from '../pages/rooms/Rooms';
 import Packages from '../pages/packages/Packages';
 import Events from '../pages/events/Events';
+import Facilities from '../pages/facilities/Facilities';
 import CheckAvailabilityForm from '../features/booking/CheckAvailabilityForm';
 
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "rooms", element: <Rooms /> },
       { path: "packages", element: <Packages /> },
       { path: "events", element: <Events /> },
+      { path: "facilities", element: <Facilities /> },
       { path: "checkout", element: <CheckAvailabilityForm /> },
     ],
   },

@@ -4,6 +4,7 @@ import heroBanner from "../../assets/images/hotelPrinceBanner .jpg";
 import RoomsSection from '../../features/rooms/RoomsSection';
 import PackagesSection from '../../features/packages/PackagesSection';
 import EventsSection from '../../features/events/EventsSection';
+import FacilitiesSection from '../../features/facilities/FacilitiesSection';
 
 const Home = () => {
   return (
@@ -52,6 +53,9 @@ const Home = () => {
       {/* event section */}
 
       <EventsSection />
+
+      {/* faclities section */}
+      <FacilitiesSection />
     </div>
   );
 };
