@@ -1,0 +1,145 @@
+[
+  {
+    "id": 1,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 2,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 3,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 4,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 5,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 6,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 7,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 8,
+    "category": "Hotel Room",
+    "code": "RO-0001",
+    "title": "Deluxe Room",
+    "availableRooms": "02 Room Available",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 9,
+    "category": "Cottage",
+    "code": "CO-0001",
+    "title": "Royal Wood Cottage",
+    "availableRooms": "02 Room Available",
+    "price": "৳8,500",
+    "guestCapacity": "2-4 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 10,
+    "category": "Cottage",
+    "code": "CO-0002",
+    "title": "Garden View Cottage",
+    "availableRooms": "03 Room Available",
+    "price": "৳7,500",
+    "guestCapacity": "2-4 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 11,
+    "category": "Villa",
+    "code": "VI-0001",
+    "title": "Luxury Pool Villa",
+    "availableRooms": "01 Room Available",
+    "price": "৳15,000",
+    "guestCapacity": "4-8 Guest",
+    "bedType": "2 King Beds",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 12,
+    "category": "Tent",
+    "code": "TE-0001",
+    "title": "Glamping Safari Tent",
+    "availableRooms": "04 Room Available",
+    "price": "৳4,000",
+    "guestCapacity": "2-3 Guest",
+    "bedType": "Queen Bed",
+    "image": "/images/deluxe-room.png"
+  },
+  {
+    "id": 13,
+    "category": "Cabin",
+    "code": "CA-0001",
+    "title": "Hilltop Wooden Cabin",
+    "availableRooms": "02 Room Available",
+    "price": "৳6,500",
+    "guestCapacity": "2-4 Guest",
+    "bedType": "King Bed",
+    "image": "/images/deluxe-room.png"
+  }
+]

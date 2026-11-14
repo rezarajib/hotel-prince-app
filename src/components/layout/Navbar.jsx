@@ -1,134 +1,83 @@
-import { NavLink, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import logoImg from '../../assets/hotel-logo 1.png';
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Scroll detection for smooth header transition
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Home পেজে স্ক্রোল না করলে সাদা টেক্সট, স্ক্রোল করলে বা অন্য পেজে থাকলে গাঢ় সবুজ/কালো টেক্সট
+  const isDarkText = !isHome || isScrolled;
+
   const navLinks = (
-    <nav className="hidden lg:flex items-center gap-8 font-['Sora',sans-serif]">
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          `relative text-[20px] leading-[28px] transition-colors duration-200 hover:text-[#FFA300] ${
-            isActive ? 'text-white font-semibold' : 'text-white font-normal'
-          }`
-        }
-      >
-        {({ isActive }) => (
-          <>
-            Home
-            {isActive && <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#FFA300] rounded-full" />}
-          </>
-        )}
-      </NavLink>
-
-      <NavLink
-        to="/rooms"
-        className={({ isActive }) =>
-          `relative text-[20px] leading-[28px] transition-colors duration-200 hover:text-[#FFA300] ${
-            isActive ? 'text-white font-semibold' : 'text-white font-normal'
-          }`
-        }
-      >
-        {({ isActive }) => (
-          <>
-            Rooms
-            {isActive && <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#FFA300] rounded-full" />}
-          </>
-        )}
-      </NavLink>
-
-      <NavLink
-        to="/packages"
-        className={({ isActive }) =>
-          `relative text-[20px] leading-[28px] transition-colors duration-200 hover:text-[#FFA300] ${
-            isActive ? 'text-white font-semibold' : 'text-white font-normal'
-          }`
-        }
-      >
-        {({ isActive }) => (
-          <>
-            Packages
-            {isActive && <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#FFA300] rounded-full" />}
-          </>
-        )}
-      </NavLink>
-
-      <NavLink
-        to="/events"
-        className={({ isActive }) =>
-          `relative text-[20px] leading-[28px] transition-colors duration-200 hover:text-[#FFA300] ${
-            isActive ? 'text-white font-semibold' : 'text-white font-normal'
-          }`
-        }
-      >
-        {({ isActive }) => (
-          <>
-            Events
-            {isActive && <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#FFA300] rounded-full" />}
-          </>
-        )}
-      </NavLink>
-
-      <NavLink
-        to="/restaurant"
-        className={({ isActive }) =>
-          `relative text-[20px] leading-[28px] transition-colors duration-200 hover:text-[#FFA300] ${
-            isActive ? 'text-white font-semibold' : 'text-white font-normal'
-          }`
-        }
-      >
-        {({ isActive }) => (
-          <>
-            Restaurant & Menu
-            {isActive && <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#FFA300] rounded-full" />}
-          </>
-        )}
-      </NavLink>
-
-      <NavLink
-        to="/rides"
-        className={({ isActive }) =>
-          `relative text-[20px] leading-[28px] transition-colors duration-200 hover:text-[#FFA300] ${
-            isActive ? 'text-white font-semibold' : 'text-white font-normal'
-          }`
-        }
-      >
-        {({ isActive }) => (
-          <>
-            Rides
-            {isActive && <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#FFA300] rounded-full" />}
-          </>
-        )}
-      </NavLink>
-
-      <NavLink
-        to="/contact"
-        className={({ isActive }) =>
-          `relative text-[20px] leading-[28px] transition-colors duration-200 hover:text-[#FFA300] ${
-            isActive ? 'text-white font-semibold' : 'text-white font-normal'
-          }`
-        }
-      >
-        {({ isActive }) => (
-          <>
-            Contact
-            {isActive && <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#FFA300] rounded-full" />}
-          </>
-        )}
-      </NavLink>
+    <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-['Sora',sans-serif]">
+      {[
+        { path: '/', label: 'Home' },
+        { path: '/rooms', label: 'Rooms' },
+        { path: '/packages', label: 'Packages' },
+        { path: '/events', label: 'Events' },
+        { path: '/restaurant', label: 'Restaurant & Menu' },
+        { path: '/rides', label: 'Rides' },
+        { path: '/contact', label: 'Contact' },
+      ].map((link) => (
+        <NavLink
+          key={link.path}
+          to={link.path}
+          className={({ isActive }) =>
+            `relative text-[16px] transition-colors duration-200 hover:text-[#FFA300] ${
+              isActive
+                ? isDarkText ? 'text-[#1E3E34] font-bold' : 'text-white font-bold'
+                : isDarkText ? 'text-[#333333] font-medium' : 'text-white/90 font-medium'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              {link.label}
+              {isActive && (
+                <span className="absolute left-0 bottom-[-4px] w-full h-[2.5px] bg-[#FFA300] rounded-full" />
+              )}
+            </>
+          )}
+        </NavLink>
+      ))}
     </nav>
   );
 
   return (
-    <header className="absolute top-[40px] left-1/2 -translate-x-1/2 w-full max-w-[1520px] z-50 px-6 md:px-12 flex items-center justify-between bg-transparent font-['Sora',sans-serif]">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-16 flex items-center justify-between transition-all duration-300 ${
+        isDarkText ? 'bg-[#F3F2EB] shadow-sm' : 'bg-transparent'
+      }`}
+    >
       {/* Brand Logo & Name */}
-      <Link to="/" className="flex items-center gap-3">
+      <Link to="/" className="flex items-center gap-3 shrink-0">
         <img src={logoImg} alt="Hotel Prince Logo" className="w-[32px] h-[32px] object-contain" />
         
         <div className="flex flex-col justify-center">
-          <h1 className="text-[#FFA300] text-[24px] font-semibold leading-[25px]">
+          <h1 className="text-[#FFA300] text-[22px] font-bold leading-none">
             Hotel Prince
           </h1>
-          <span className="text-gray-300 text-[12px] font-normal leading-tight tracking-[1px] uppercase mt-1">
+          <span
+            className={`text-[10px] font-semibold leading-tight tracking-[1px] uppercase mt-1 ${
+              isDarkText ? 'text-[#1E3E34]' : 'text-gray-200'
+            }`}
+          >
             A STAY TO REMEMBER
           </span>
         </div>
@@ -137,11 +86,11 @@ const Navbar = () => {
       {/* Navigation Links */}
       {navLinks}
 
-      {/* Login / Signup Button (Exact Figma Specs: 193px x 51px, Radius 9px, Color #FFA300) */}
-      <div>
+      {/* Login / Signup Button */}
+      <div className="hidden sm:block">
         <Link
           to="/auth"
-          className="w-[193px] h-[51px] bg-[#FFA300] hover:bg-[#e69300] text-gray-900 font-semibold text-sm transition duration-200 shadow-md flex items-center justify-center rounded-[9px]"
+          className="px-6 py-2.5 bg-[#FFA300] hover:bg-[#e69300] text-gray-900 font-semibold text-sm transition duration-200 shadow-sm rounded-[10px]"
         >
           Login / Signup
         </Link>
