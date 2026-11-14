@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import fallbackImg from '../../assets/images/hotelPrince.jpg'; // কোনো ছবিই না পেলে ব্যাকআপ হিসেবে কাজ করবে
+import fallbackImg from '../../assets/images/hotelPrince.jpg';
 
 const PackageCard = ({ pkg }) => {
  
