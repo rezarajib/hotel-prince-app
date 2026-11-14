@@ -3,6 +3,7 @@ import AboutSection from "../../features/about/AboutSection";
 import heroBanner from "../../assets/images/hotelPrinceBanner .jpg";
 import RoomsSection from '../../features/rooms/RoomsSection';
 import PackagesSection from '../../features/packages/PackagesSection';
+import EventsSection from '../../features/events/EventsSection';
 
 const Home = () => {
   return (
@@ -47,6 +48,10 @@ const Home = () => {
 
       {/* packges secion  */}
       <PackagesSection />
+
+      {/* event section */}
+
+      <EventsSection />
     </div>
   );
 };

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "code": "EV-HP0001",
+    "title": "Birthday Party",
+    "description": "Enjoy a refreshing weekend with your loved ones at our resort. Experience comfortable accommodation, delicious meals, fun-filled activities, and quality time together in a serene natural environment.",
+    "guestCapacity": "20-25 People",
+    "venue": "Garden",
+    "price": "৳10,050.00",
+    "image": "/images/events/event-1.png"
+  },
+  {
+    "id": 2,
+    "code": "EV-HP0002",
+    "title": "Corporate Event",
+    "description": "Enjoy a refreshing weekend with your loved ones at our resort. Experience comfortable accommodation, delicious meals, fun-filled activities, and quality time together in a serene natural environment.",
+    "guestCapacity": "20-25 People",
+    "venue": "Garden",
+    "price": "৳10,050.00",
+    "image": "/images/events/event-2.png"
+  },
+  {
+    "id": 3,
+    "code": "EV-HP0003",
+    "title": "Anniversary Party",
+    "description": "Enjoy a refreshing weekend with your loved ones at our resort. Experience comfortable accommodation, delicious meals, fun-filled activities, and quality time together in a serene natural environment.",
+    "guestCapacity": "20-25 People",
+    "venue": "Garden",
+    "price": "৳10,050.00",
+    "image": "/images/events/event-3.png"
+  },
+  {
+    "id": 4,
+    "code": "EV-HP0001",
+    "title": "Family Gathering",
+    "description": "Enjoy a refreshing weekend with your loved ones at our resort. Experience comfortable accommodation, delicious meals, fun-filled activities, and quality time together in a serene natural environment.",
+    "guestCapacity": "20-25 People",
+    "venue": "Garden",
+    "price": "৳10,050.00",
+    "image": "/images/events/event-4.png"
+  }
+]
