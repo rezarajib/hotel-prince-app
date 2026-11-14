@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "How can I book a room at Hotel Prince?",
+    "answer": "You can easily book a room directly through our website by selecting your check-in and check-out dates, choosing your preferred room type, and completing the reservation online. You can also contact our 24/7 front desk for assistance."
+  },
+  {
+    "id": 2,
+    "question": "What types of accommodation packages do you offer?",
+    "answer": "We offer a variety of curated packages including Weekend Getaways, Romantic Couple Retreats, Family Vacation Packages, and Corporate Stay Deals—each designed with complimentary meals and resort activities."
+  },
+  {
+    "id": 3,
+    "question": "Can I book a private event or celebration at Hotel Prince?",
+    "answer": "Yes! We host birthday parties, corporate events, anniversaries, and family gatherings in both our scenic garden venue and indoor conference spaces with full catering and event support."
+  },
+  {
+    "id": 4,
+    "question": "Do I need to make a reservation to visit the restaurant?",
+    "answer": "Walk-in guests are always welcome at our restaurant. However, we recommend making an advance reservation during weekends, holidays, or for large group dining to ensure preferred seating."
+  },
+  {
+    "id": 5,
+    "question": "What types of rides and recreational activities are available?",
+    "answer": "Guests can enjoy our swimming pool, outdoor nature trails, boat rides, kids' play zone, indoor games, and evening cultural programs throughout their stay."
+  },
+  {
+    "id": 6,
+    "question": "What facilities are included during my stay?",
+    "answer": "Your stay includes access to our swimming pool, fitness center, free secure parking, high-speed Wi-Fi, outdoor relaxation spaces, and 24/7 reception service."
+  }
+]

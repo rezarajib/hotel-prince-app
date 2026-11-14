@@ -6,6 +6,7 @@ import PackagesSection from '../../features/packages/PackagesSection';
 import EventsSection from '../../features/events/EventsSection';
 import FacilitiesSection from '../../features/facilities/FacilitiesSection';
 import TestimonialsSection from '../../features/testimonials/TestimonialsSection';
+import FaqSection from '../../features/faq/FaqSection';
 
 const Home = () => {
   return (
@@ -60,6 +61,9 @@ const Home = () => {
 
       {/* TestimonialsSection  */}
       <TestimonialsSection />
+
+      {/* FaqSection  */}
+      <FaqSection />
     </div>
   );
 };
