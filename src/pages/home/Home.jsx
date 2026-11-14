@@ -2,6 +2,7 @@ import CheckAvailabilityForm from "../../features/booking/CheckAvailabilityForm"
 import AboutSection from "../../features/about/AboutSection";
 import heroBanner from "../../assets/images/hotelPrinceBanner .jpg";
 import RoomsSection from '../../features/rooms/RoomsSection';
+import PackagesSection from '../../features/packages/PackagesSection';
 
 const Home = () => {
   return (
@@ -35,11 +36,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. About Section এখানে বসানো হয়েছে */}
+      {/* 2. About Section  */}
       <AboutSection />
 
-      {/* 3. Rooms Section এখানে বসানো হলো */}
+      {/* 3. Rooms Section */}
+
+     
+      
       <RoomsSection />
+
+      {/* packges secion  */}
+      <PackagesSection />
     </div>
   );
 };

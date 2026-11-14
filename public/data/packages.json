@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "category": "Family Package",
+    "code": "PKG-0001",
+    "title": "Family Weekend Escape",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-1.png"
+  },
+  {
+    "id": 2,
+    "category": "Family Package",
+    "code": "PKG-0001",
+    "title": "Family Weekend Escape",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-2.png"
+  },
+  {
+    "id": 3,
+    "category": "Family Package",
+    "code": "PKG-0001",
+    "title": "Family Weekend Escape",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-3.png"
+  },
+  {
+    "id": 4,
+    "category": "Family Package",
+    "code": "PKG-0001",
+    "title": "Family Weekend Escape",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-4.png"
+  },
+  {
+    "id": 5,
+    "category": "Family Package",
+    "code": "PKG-0001",
+    "title": "Family Weekend Escape",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-5.png"
+  },
+  {
+    "id": 6,
+    "category": "Family Package",
+    "code": "PKG-0001",
+    "title": "Family Weekend Escape",
+    "price": "৳5,000",
+    "guestCapacity": "2-6 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-6.png"
+  },
+  {
+    "id": 7,
+    "category": "Couple Package",
+    "code": "PKG-0002",
+    "title": "Romantic Couple Getaway",
+    "price": "৳6,500",
+    "guestCapacity": "2 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-1.png"
+  },
+  {
+    "id": 8,
+    "category": "Honeymoon Package",
+    "code": "PKG-0003",
+    "title": "Royal Honeymoon Retreat",
+    "price": "৳12,000",
+    "guestCapacity": "2 Guest",
+    "duration": "3 Days, 2 Nights",
+    "image": "/pkg-2.png"
+  },
+  {
+    "id": 9,
+    "category": "Day Tour",
+    "code": "PKG-0004",
+    "title": "Full Day Resort Experience",
+    "price": "৳2,500",
+    "guestCapacity": "1-10 Guest",
+    "duration": "1 Day (9 AM - 6 PM)",
+    "image": "/pkg-3.png"
+  },
+  {
+    "id": 10,
+    "category": "Group Package",
+    "code": "PKG-0005",
+    "title": "Corporate & Friends Picnic",
+    "price": "৳25,000",
+    "guestCapacity": "10-25 Guest",
+    "duration": "2 Days, 1 Night",
+    "image": "/pkg-4.png"
+  }
+]
