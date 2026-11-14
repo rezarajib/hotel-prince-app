@@ -1,9 +1,11 @@
 import React from 'react';
+import RoomsHero from '../../features/rooms/RoomsHero';
 import RoomsSection from '../../features/rooms/RoomsSection';
 
 const Rooms = () => {
   return (
-    <main className="min-h-screen bg-[#F4F5F0]">
+    <main className="min-h-screen bg-white">
+      <RoomsHero />
       <RoomsSection />
     </main>
   );
