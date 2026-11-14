@@ -5,6 +5,7 @@ import RoomsSection from '../../features/rooms/RoomsSection';
 import PackagesSection from '../../features/packages/PackagesSection';
 import EventsSection from '../../features/events/EventsSection';
 import FacilitiesSection from '../../features/facilities/FacilitiesSection';
+import TestimonialsSection from '../../features/testimonials/TestimonialsSection';
 
 const Home = () => {
   return (
@@ -56,6 +57,9 @@ const Home = () => {
 
       {/* faclities section */}
       <FacilitiesSection />
+
+      {/* TestimonialsSection  */}
+      <TestimonialsSection />
     </div>
   );
 };
