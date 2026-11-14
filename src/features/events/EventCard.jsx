@@ -4,7 +4,6 @@ import fallbackImg from '../../assets/images/hotelPrince.jpg';
 const EventCard = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // স্মার্ট ইমেজ পাথ চেকার (যেখানেই ছবি রাখুন না কেন খুঁজে নেবে)
   const fileName = event.image ? event.image.split('/').pop() : 'event-1.png';
   const possiblePaths = [
     event.image,
@@ -30,7 +29,7 @@ const EventCard = ({ event }) => {
     }
   };
 
-  // Show More লজিক (Figma ডিজাইনের মতো ১১০ ক্যারেক্টার পর ...Show More দেখাবে)
+ 
   const maxLength = 108;
   const shouldTruncate = event.description && event.description.length > maxLength;
   const displayedText =
