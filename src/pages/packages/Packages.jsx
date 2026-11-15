@@ -1,11 +1,13 @@
 
+import PackagesHero from '../../features/packages/PackagesHero';
 import PackagesSection from '../../features/packages/PackagesSection';
 
 const Packages = () => {
   return (
-    <div className="pt-10">
+    <main className="bg-white">
+      <PackagesHero />
       <PackagesSection />
-    </div>
+    </main>
   );
 };
 
