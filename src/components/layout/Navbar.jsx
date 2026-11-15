@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import logoImg from '../../assets/hotel-logo 1.png';
+import CustomButton from '../common/Button';
 
 const Navbar = () => {
   const location = useLocation();
@@ -87,14 +88,17 @@ const Navbar = () => {
       {navLinks}
 
       {/* Login / Signup Button */}
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
         <Link
           to="/auth"
           className="px-6 py-2.5 bg-[#FFA300] hover:bg-[#e69300] text-gray-900 font-semibold text-sm transition duration-200 shadow-sm rounded-[10px]"
         >
           Login / Signup
         </Link>
-      </div>
+      </div> */}
+      <CustomButton children='login/signup'/>
+
+
     </header>
   );
 };

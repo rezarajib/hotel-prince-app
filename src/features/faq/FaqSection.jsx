@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+
+
 
 const fetchFaqs = async () => {
   const response = await fetch('/data/faqs.json');

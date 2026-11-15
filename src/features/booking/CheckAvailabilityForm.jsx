@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Calendar, User, ChevronDown } from 'lucide-react';
+import CustomButton from '../../components/common/Button';
 
 const CheckAvailabilityForm = () => {
   const navigate = useNavigate();
@@ -73,14 +74,16 @@ const CheckAvailabilityForm = () => {
         </div>
 
         {/* Submit Button */}
-        <div>
+
+        <CustomButton type='submit'  btnText='Check Availability' className="w-full h-[48px]  hover:bg-[#152D26] text-white font-medium text-[14px] rounded-[10px] transition duration-200 shadow-sm flex items-center justify-center cursor-pointer bg-green-800"/>
+        {/* <div>
           <button
             type="submit"
             className="w-full h-[48px] bg-[#1E3E34] hover:bg-[#152D26] text-white font-medium text-[14px] rounded-[10px] transition duration-200 shadow-sm flex items-center justify-center cursor-pointer"
           >
             Check Availability
           </button>
-        </div>
+        </div> */}
       </form>
     </div>
   );
