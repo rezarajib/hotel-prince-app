@@ -1,0 +1,20 @@
+{
+  "restaurants": [
+    { "id": 1, "code": "RID-HP0001", "name": "The Garden Restaurant", "status": "Published", "type": "Fine Dining", "menuCount": 30, "hours": "8 AM - 11 PM", "ongoing": "05", "completed": "50", "image": "/images/pkg-1.png" },
+    { "id": 2, "code": "RID-HP0001", "name": "Poolside Café", "status": "Published", "type": "Fine Dining", "menuCount": 30, "hours": "8 AM - 11 PM", "ongoing": "05", "completed": "50", "image": "/images/pkg-2.png" },
+    { "id": 3, "code": "RID-HP0001", "name": "Rooftop Restaurant", "status": "Published", "type": "Fine Dining", "menuCount": 30, "hours": "8 AM - 11 PM", "ongoing": "05", "completed": "50", "image": "/images/pkg-3.png" },
+    { "id": 4, "code": "RID-HP0001", "name": "Poolside Café", "status": "Published", "type": "Fine Dining", "menuCount": 30, "hours": "8 AM - 11 PM", "ongoing": "05", "completed": "50", "image": "/images/pkg-4.png" }
+  ],
+  "menuItems": [
+    { "id": 1, "restaurantId": 1, "category": "Main Course", "title": "Beef Burger", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-1.png" },
+    { "id": 2, "restaurantId": 1, "category": "Dessert", "title": "Chocolate Cake", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-2.png" },
+    { "id": 3, "restaurantId": 1, "category": "Drinks", "title": "Expresso", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-3.png" },
+    { "id": 4, "restaurantId": 1, "category": "Drinks", "title": "Fresh Orange Juice", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-4.png" },
+    { "id": 5, "restaurantId": 1, "category": "Starter", "title": "Garden Salad", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-1.png" },
+    { "id": 6, "restaurantId": 2, "category": "Drinks", "title": "Fresh Orange Juice", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-4.png" },
+    { "id": 7, "restaurantId": 2, "category": "Drinks", "title": "Expresso", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-3.png" },
+    { "id": 8, "restaurantId": 3, "category": "Starter", "title": "Garden Salad", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-1.png" },
+    { "id": 9, "restaurantId": 3, "category": "Dessert", "title": "Chocolate Cake", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-2.png" },
+    { "id": 10, "restaurantId": 4, "category": "Main Course", "title": "Beef Burger", "desc": "Juicy beef patty with lettuce & Cheddar", "price": "520.00", "image": "/images/pkg-1.png" }
+  ]
+}
