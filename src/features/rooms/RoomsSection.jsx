@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+
 import { useQuery } from '@tanstack/react-query';
-import RoomCard from './RoomCard';
+import CommonListingCard from '../../components/common/CommonListingCard';
+import { useState } from 'react';
 
 const CATEGORIES = ['Hotel Room', 'Cottage', 'Villa', 'Tent', 'Cabin'];
 
@@ -68,7 +69,7 @@ const RoomsSection = () => {
 
                 {/* Loading Skeleton */}
                 {isLoading && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
                         {[...Array(8)].map((_, index) => (
                             <div
                                 key={index}
@@ -95,11 +96,11 @@ const RoomsSection = () => {
                     </div>
                 )}
 
-                {/* Rooms Grid */}
+                {/* Rooms Grid (CommonListingCard ব্যবহার করা হয়েছে) */}
                 {!isLoading && !isError && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
                         {filteredRooms.map((room) => (
-                            <RoomCard key={room.id} room={room} />
+                            <CommonListingCard key={room.id} item={room} />
                         ))}
                     </div>
                 )}

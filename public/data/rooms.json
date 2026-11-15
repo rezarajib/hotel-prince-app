@@ -8,7 +8,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 2,
@@ -19,7 +26,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 3,
@@ -30,7 +44,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 4,
@@ -41,7 +62,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 5,
@@ -52,7 +80,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 6,
@@ -63,7 +98,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 7,
@@ -74,7 +116,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 8,
@@ -85,7 +134,14 @@
     "price": "৳5,000",
     "guestCapacity": "2-6 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 9,
@@ -96,7 +152,14 @@
     "price": "৳8,500",
     "guestCapacity": "2-4 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 10,
@@ -107,7 +170,14 @@
     "price": "৳7,500",
     "guestCapacity": "2-4 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 11,
@@ -118,7 +188,14 @@
     "price": "৳15,000",
     "guestCapacity": "4-8 Guest",
     "bedType": "2 King Beds",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 12,
@@ -129,7 +206,14 @@
     "price": "৳4,000",
     "guestCapacity": "2-3 Guest",
     "bedType": "Queen Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   },
   {
     "id": 13,
@@ -140,6 +224,13 @@
     "price": "৳6,500",
     "guestCapacity": "2-4 Guest",
     "bedType": "King Bed",
-    "image": "/images/deluxe-room.png"
+    "image": "/images/deluxe-room.png",
+    "detailsImage": "/images/rooms/bookDetails.png",
+    "gallery": [
+      "/images/pkg-1.png",
+      "/images/pkg-2.png",
+      "/images/pkg-3.png",
+      "/images/pkg-4.png"
+    ]
   }
 ]

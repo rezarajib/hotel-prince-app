@@ -83,7 +83,7 @@ const PackagesSection = () => {
         {/* Error Message */}
         {isError && (
           <div className="text-center py-10 text-red-600 text-sm">
-            প্যাকেজের তথ্য লোড করা সম্ভব হয়নি। দয়া করে `public/data/packages.json` চেক করুন।
+             `public/data/packages.json` 
           </div>
         )}
 
