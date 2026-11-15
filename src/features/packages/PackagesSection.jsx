@@ -88,7 +88,10 @@ const PackagesSection = () => {
         )}
 
         {/* Packages Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+
+
+
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
   {filteredPackages.map((pkg) => (
     <PackageCard key={pkg.id} pkg={pkg} />
   ))}

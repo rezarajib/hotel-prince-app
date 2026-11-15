@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Calendar, User, ChevronDown } from 'lucide-react';
 
 const PackagesHero = () => {
