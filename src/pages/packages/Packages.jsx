@@ -1,4 +1,4 @@
-import React from 'react';
+
 import PackagesSection from '../../features/packages/PackagesSection';
 
 const Packages = () => {
