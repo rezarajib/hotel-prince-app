@@ -1,11 +1,10 @@
-import React from 'react';
 
 const RoomCard = ({ room }) => {
   return (
     <div className="bg-white rounded-2xl p-4 shadow-[0_2px_10px_rgba(0,0,0,0.03)] hover:shadow-md transition-all duration-300 border border-[#ECEEE9] flex flex-col justify-between">
       <div>
         {/* Room Image with Top-Right Arrow Button */}
-        <div className="relative h-[200px] w-full rounded-xl overflow-hidden mb-4 group">
+        <div className="relative h-50 w-full rounded-xl overflow-hidden mb-4 group">
           <img
             src={room.image}
             alt={room.title}

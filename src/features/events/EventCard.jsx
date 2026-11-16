@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ArrowUpRight, X, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import fallbackImg from '../../assets/images/hotelPrince.jpg';
@@ -19,8 +19,6 @@ const EventCard = ({ event }) => {
   const paths = [event.image, `/images/${file}`, `/${file}`, `/images/events/${file}`, fallbackImg];
   const [idx, setIdx] = useState(0);
   const [imgSrc, setImgSrc] = useState(paths[0]);
-
-  useEffect(() => { setIdx(0); setImgSrc(paths[0]); }, [event.image]);
 
   const onImgErr = () => {
     if (idx + 1 < paths.length) {

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import RoomsHero from '../../features/rooms/RoomsHero';
 import RoomsSection from '../../features/rooms/RoomsSection';
 

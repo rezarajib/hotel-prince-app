@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, User, ChevronDown } from 'lucide-react';
+import { User, ChevronDown } from 'lucide-react';
 import CustomButton from '../../components/common/Button';
 
 const CheckAvailabilityForm = () => {
   const navigate = useNavigate();
-  const [checkIn, setCheckIn] = useState('10/11/2026');
-  const [checkOut, setCheckOut] = useState('12/11/2026');
+  const [checkIn, setCheckIn] = useState('2026-11-10');
+  const [checkOut, setCheckOut] = useState('2026-11-12');
   const [guests, setGuests] = useState('02 Person');
 
   const handleSubmit = (e) => {
@@ -15,8 +15,8 @@ const CheckAvailabilityForm = () => {
   };
 
   return (
-    <div className="w-full max-w-[1140px] mx-auto bg-white rounded-[20px] p-6 sm:p-7 shadow-sm">
-      <form 
+    <div className="w-full max-w-285 mx-auto bg-white rounded-[20px] p-6 sm:p-7 shadow-sm">
+      <form
         onSubmit={handleSubmit}
         className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end"
       >
@@ -25,14 +25,14 @@ const CheckAvailabilityForm = () => {
           <label className="text-[15px] font-semibold text-[#111111]">
             Check-In
           </label>
-          <div className="relative flex items-center bg-[#EFEFEF]/70 rounded-[12px] px-4 h-[48px]">
+          <div className="relative flex items-center bg-[#EFEFEF]/70 rounded-xl px-4 h-12">
             <input
-              type="text"
+              type="date"
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
-              className="w-full bg-transparent text-[#666666] text-[14px] font-normal focus:outline-none border-none p-0"
+              onClick={(e) => e.target.showPicker && e.target.showPicker()}
+              className="w-full bg-transparent text-[#666666] text-[14px] font-normal focus:outline-none border-none p-0 cursor-pointer"
             />
-            <Calendar className="w-4 h-4 text-[#333333] shrink-0 cursor-pointer ml-2" />
           </div>
         </div>
 
@@ -41,14 +41,15 @@ const CheckAvailabilityForm = () => {
           <label className="text-[15px] font-semibold text-[#111111]">
             Check-Out
           </label>
-          <div className="relative flex items-center bg-[#EFEFEF]/70 rounded-[12px] px-4 h-[48px]">
+          <div className="relative flex items-center bg-[#EFEFEF]/70 rounded-xl px-4 h-12">
             <input
-              type="text"
+              type="date"
               value={checkOut}
+              min={checkIn}
               onChange={(e) => setCheckOut(e.target.value)}
-              className="w-full bg-transparent text-[#666666] text-[14px] font-normal focus:outline-none border-none p-0"
+              onClick={(e) => e.target.showPicker && e.target.showPicker()}
+              className="w-full bg-transparent text-[#666666] text-[14px] font-normal focus:outline-none border-none p-0 cursor-pointer"
             />
-            <Calendar className="w-4 h-4 text-[#333333] shrink-0 cursor-pointer ml-2" />
           </div>
         </div>
 
@@ -57,7 +58,7 @@ const CheckAvailabilityForm = () => {
           <label className="text-[15px] font-semibold text-[#111111]">
             Guests
           </label>
-          <div className="relative flex items-center bg-[#EFEFEF]/70 rounded-[12px] px-4 h-[48px]">
+          <div className="relative flex items-center bg-[#EFEFEF]/70 rounded-xl px-4 h-12">
             <User className="w-4 h-4 text-[#333333] shrink-0 mr-2.5" />
             <select
               value={guests}
@@ -74,16 +75,11 @@ const CheckAvailabilityForm = () => {
         </div>
 
         {/* Submit Button */}
-
-        <CustomButton type='submit'  btnText='Check Availability' className="w-full h-[48px]  hover:bg-[#152D26] text-white font-medium text-[14px] rounded-[10px] transition duration-200 shadow-sm flex items-center justify-center cursor-pointer bg-green-800"/>
-        {/* <div>
-          <button
-            type="submit"
-            className="w-full h-[48px] bg-[#1E3E34] hover:bg-[#152D26] text-white font-medium text-[14px] rounded-[10px] transition duration-200 shadow-sm flex items-center justify-center cursor-pointer"
-          >
-            Check Availability
-          </button>
-        </div> */}
+        <CustomButton
+          type="submit"
+          btnText="Check Availability"
+          className="w-full h-12 bg-[#18392B] hover:bg-[#122b20] text-white font-medium text-[14px] rounded-[10px] transition duration-200 shadow-sm flex items-center justify-center cursor-pointer"
+        />
       </form>
     </div>
   );

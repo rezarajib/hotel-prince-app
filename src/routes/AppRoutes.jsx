@@ -6,22 +6,31 @@ import Packages from '../pages/packages/Packages';
 import Events from '../pages/events/Events';
 import Restaurant from '../pages/restaurant/Restaurant';
 import Facilities from '../pages/facilities/Facilities';
+import Rides from '../pages/rides/Rides';
+import Contact from '../pages/contact/Contact';
+import SignUp from '../pages/auth/component/SignUp';
 import CheckAvailabilityForm from '../features/booking/CheckAvailabilityForm';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <MainLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "rooms", element: <Rooms /> },
-      { path: "packages", element: <Packages /> },
-      { path: "events", element: <Events /> },
-      { path: "restaurant", element: <Restaurant /> },
-      { path: "restaurants", element: <Restaurant /> },
-      { path: "facilities", element: <Facilities /> },
-      { path: "checkout", element: <CheckAvailabilityForm /> },
+      { path: 'rooms', element: <Rooms /> },
+      { path: 'packages', element: <Packages /> },
+      { path: 'events', element: <Events /> },
+      { path: 'restaurant', element: <Restaurant /> },
+      { path: 'restaurants', element: <Restaurant /> },
+      { path: 'facilities', element: <Facilities /> },
+      { path: 'rides', element: <Rides /> },
+      { path: 'contact', element: <Contact /> },
+      { path: 'checkout', element: <CheckAvailabilityForm /> },
     ],
+  },
+  {
+    path: '/signup',
+    element: <SignUp />,
   },
 ]);
 

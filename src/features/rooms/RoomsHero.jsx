@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const RoomsHero = () => {
@@ -70,7 +70,7 @@ const RoomsHero = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#18392B] hover:bg-[#122b20] text-white text-[13px] font-medium py-2 px-5 rounded-lg transition-colors cursor-pointer h-[38px]"
+            className="w-full bg-[#18392B] hover:bg-[#122b20] text-white text-[13px] font-medium py-2 px-5 rounded-lg transition-colors cursor-pointer h-9.5"
           >
             Check Availability
           </button>

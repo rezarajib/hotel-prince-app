@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, User, ChevronDown } from 'lucide-react';
 import EventsSection from '../../features/events/EventsSection';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import aboutHotelImg from '../../assets/images/about-hotel.png';
 
 const AboutSection = () => {

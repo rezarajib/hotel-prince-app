@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { X, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const RoomDetailsModal = ({ room, onClose }) => {
   const navigate = useNavigate();
 
-  if (!room) return null;
-
-  const roomPricingList = room.roomNumbers || [
+  const roomPricingList = room?.roomNumbers || [
     { roomNo: '3001', view: 'Lake View', price: '৳8500.00' },
     { roomNo: '3002', view: 'Mountain View', price: '৳8000.00' },
     { roomNo: '3003', view: 'Pool View', price: '৳7500.00' },
@@ -16,6 +14,8 @@ const RoomDetailsModal = ({ room, onClose }) => {
   ];
 
   const [selectedRoomNo, setSelectedRoomNo] = useState(roomPricingList[0]?.roomNo);
+
+  if (!room) return null;
 
   const activitiesCol1 = room.activitiesLeft || [
     'Swimming Pool',

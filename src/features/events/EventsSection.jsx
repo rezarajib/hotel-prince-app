@@ -1,4 +1,3 @@
-import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import EventCard from './EventCard';
 
@@ -29,7 +28,7 @@ const EventsSection = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
-            {events.map((ev) => <EventCard key={ev.id} event={ev} />)}
+            {events.map((ev) => <EventCard key={`${ev.id}-${ev.image}`} event={ev} />)}
           </div>
         )}
       </div>

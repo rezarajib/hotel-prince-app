@@ -73,9 +73,9 @@ const RoomsSection = () => {
                         {[...Array(8)].map((_, index) => (
                             <div
                                 key={index}
-                                className="bg-[#F7F8F3] rounded-2xl p-4 h-[380px] animate-pulse border border-[#ECEEE9]"
+                                className="bg-[#F7F8F3] rounded-2xl p-4 h-95 animate-pulse border border-[#ECEEE9]"
                             >
-                                <div className="h-[200px] bg-gray-200 rounded-xl mb-4"></div>
+                                <div className="h-50 bg-gray-200 rounded-xl mb-4"></div>
                                 <div className="h-4 bg-gray-200 rounded w-1/3 mb-3"></div>
                                 <div className="h-6 bg-gray-200 rounded w-2/3 mb-4"></div>
                                 <div className="h-10 bg-gray-200 rounded-lg mt-auto"></div>

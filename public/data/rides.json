@@ -1,0 +1,94 @@
+{
+    "rides": [
+        {
+            "id": 1,
+            "title": "Kayaking",
+            "category": "Water",
+            "duration": "30 Min · 1-2 Person",
+            "note": "Life Jacket Provided",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600"
+        },
+        {
+            "id": 2,
+            "title": "Boating",
+            "category": "Water",
+            "duration": "30 Min · 1-2 Person",
+            "note": "Life Jacket Provided",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600"
+        },
+        {
+            "id": 3,
+            "title": "Swimming Pool",
+            "category": "Water",
+            "duration": "30 Min · 1 Person",
+            "note": "Lifeguard Available",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600"
+        },
+        {
+            "id": 4,
+            "title": "Bicycle Riding",
+            "category": "Adventure",
+            "duration": "30 Min · 1 Person",
+            "note": "Helmet Required",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=600"
+        },
+        {
+            "id": 5,
+            "title": "Paddle Boating",
+            "category": "Family",
+            "duration": "30 Min · 2-4 Persons",
+            "note": "Life Jacket Provided",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1564419320461-6870880221ad?w=600"
+        },
+        {
+            "id": 6,
+            "title": "Horse Riding",
+            "category": "Adventure",
+            "duration": "15 Min · 1 Person",
+            "note": "Helmet & Instructor",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600"
+        },
+        {
+            "id": 7,
+            "title": "ATV Ride",
+            "category": "Adventure",
+            "duration": "20 Min · 1-2 Persons",
+            "note": "Helmet Required",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600"
+        },
+        {
+            "id": 8,
+            "title": "Zipline Adventure",
+            "category": "Adventure",
+            "duration": "10 Min · 1 Person",
+            "note": "Safety Harness",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=600"
+        },
+        {
+            "id": 9,
+            "title": "Fishing",
+            "category": "Family",
+            "duration": "60 Min · 1-2 Persons",
+            "note": "Adult Supervision",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=600"
+        },
+        {
+            "id": 10,
+            "title": "Archery",
+            "category": "Indoor",
+            "duration": "20 Min · 1 Person",
+            "note": "Instructor Supervision",
+            "price": 520,
+            "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600"
+        }
+    ]
+}
