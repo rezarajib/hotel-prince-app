@@ -1,14 +1,18 @@
-import { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect, useContext } from 'react';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
+import { CalendarDays, ChevronDown, LogOut, Menu, Settings, UserRound, X } from 'lucide-react';
 import logoImg from '../../assets/hotel-logo 1.png';
 import CustomButton from '../common/Button';
+import { AuthContext } from '../../features/auth/AuthContext';
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, logout } = useContext(AuthContext);
   const isHome = location.pathname === '/';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -46,6 +50,12 @@ const Navbar = () => {
 
   // Home পেজে স্ক্রোল না করলে সাদা টেক্সট, স্ক্রোল করলে বা অন্য পেজে থাকলে গাঢ় সবুজ/কালো টেক্সট
   const isDarkText = !isHome || isScrolled || isMobileMenuOpen;
+  const handleLogout = () => {
+    logout();
+    setIsUserMenuOpen(false);
+    setIsMobileMenuOpen(false);
+    navigate('/');
+  };
 
   const navLinks = (
     <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-['Sora',sans-serif]">
@@ -112,10 +122,58 @@ const Navbar = () => {
         {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
-      {/* Login / Signup Button (Fixed with Link to /signup) */}
-      <Link to="/signup" className="hidden sm:inline-flex">
-        <CustomButton>Login / Signup</CustomButton>
-      </Link>
+      <div className="relative hidden sm:block">
+        {user ? (
+          <>
+            <button
+              type="button"
+              onClick={() => setIsUserMenuOpen((open) => !open)}
+              aria-expanded={isUserMenuOpen}
+              aria-haspopup="menu"
+              className="inline-flex items-center gap-2 rounded-full border border-[#DDE3DD] bg-white px-4 py-2.5 text-sm font-semibold text-[#18392B] shadow-sm hover:bg-[#F8FAF8]"
+            >
+              <UserRound className="h-4 w-4" />
+              <span>{user.name}</span>
+              <ChevronDown className={`h-4 w-4 transition-transform ${isUserMenuOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {isUserMenuOpen && (
+              <div role="menu" className="absolute right-0 top-full z-50 mt-2 w-56 rounded-xl border border-[#EAEAEA] bg-white p-2 shadow-lg">
+                <Link
+                  role="menuitem"
+                  to="/my-bookings"
+                  onClick={() => setIsUserMenuOpen(false)}
+                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-[#333] hover:bg-[#F3F4EF]"
+                >
+                  <CalendarDays className="h-4 w-4 text-[#18392B]" />
+                  View Bookings
+                </Link>
+                <Link
+                  role="menuitem"
+                  to="/profile-settings"
+                  onClick={() => setIsUserMenuOpen(false)}
+                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-[#333] hover:bg-[#F3F4EF]"
+                >
+                  <Settings className="h-4 w-4 text-[#18392B]" />
+                  Profile Setting
+                </Link>
+                <button
+                  type="button"
+                  role="menuitem"
+                  onClick={handleLogout}
+                  className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm text-[#9B352B] hover:bg-[#FFF4F2]"
+                >
+                  <LogOut className="h-4 w-4" />
+                  Log Out
+                </button>
+              </div>
+            )}
+          </>
+        ) : (
+          <Link to="/login">
+            <CustomButton>Login / Signup</CustomButton>
+          </Link>
+        )}
+      </div>
 
       <nav
         id="mobile-navigation"
@@ -139,14 +197,39 @@ const Navbar = () => {
           </NavLink>
         ))}
 
-        {/* Mobile Login / Signup Link */}
-        <Link
-          to="/signup"
-          onClick={() => setIsMobileMenuOpen(false)}
-          className="mt-2 rounded-lg bg-[#FFA300] px-3 py-2.5 text-center font-['Sora',sans-serif] text-sm font-semibold text-gray-900"
-        >
-          Login / Signup
-        </Link>
+        {user ? (
+          <>
+            <Link
+              to="/my-bookings"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-2 rounded-lg px-3 py-2.5 font-['Sora',sans-serif] text-sm font-semibold text-[#18392B] hover:bg-black/5"
+            >
+              View Bookings
+            </Link>
+            <Link
+              to="/profile-settings"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="rounded-lg px-3 py-2.5 font-['Sora',sans-serif] text-sm font-semibold text-[#18392B] hover:bg-black/5"
+            >
+              Profile Setting
+            </Link>
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="rounded-lg px-3 py-2.5 text-left font-['Sora',sans-serif] text-sm font-semibold text-[#9B352B] hover:bg-black/5"
+            >
+              Log Out
+            </button>
+          </>
+        ) : (
+          <Link
+            to="/login"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="mt-2 rounded-lg bg-[#FFA300] px-3 py-2.5 text-center font-['Sora',sans-serif] text-sm font-semibold text-gray-900"
+          >
+            Login / Signup
+          </Link>
+        )}
       </nav>
     </header>
   );

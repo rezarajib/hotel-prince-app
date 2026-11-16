@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Building2 } from 'lucide-react';
 import InputField from '../../../components/common/InputField';
+import AuthLayout from '../../../features/auth/AuthLayout';
 
 const SignUp = () => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', phone: '', password: '', confirmPassword: '' });
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   // সব ইনপুট ফিল্ডের লিস্ট
   const fields = [
@@ -23,35 +24,19 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
-      return alert('Passwords do not match!');
+      setError('Passwords do not match.');
+      return;
     }
-    console.log('Form Data:', formData);
+    navigate('/login');
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#F2F7F4] via-[#CBE4D8] to-[#94C9B2] p-4">
-      {/* White Card */}
-      <div className="relative w-full max-w-md rounded-3xl bg-white p-8 shadow-lg">
-        {/* Back Button */}
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#F5F5F0] text-[#333] hover:bg-gray-200 cursor-pointer"
-        >
-          <ChevronLeft className="h-4 w-4" />
-        </button>
-
-        {/* Top Icon & Title */}
-        <div className="mt-2 mb-6 text-center">
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#18392B] text-white">
-            <Building2 className="h-6 w-6" />
-          </div>
+    <AuthLayout backTo="/login">
           <h1 className="text-2xl font-semibold text-[#111]">Create An Account</h1>
           <p className="mt-1 text-xs text-[#777]">Create an account and stay at Hotel Prince.</p>
-        </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="mt-6 space-y-4 text-left">
           {fields.map((field) => (
             <InputField
               key={field.name}
@@ -60,6 +45,8 @@ const SignUp = () => {
               onChange={handleChange}
             />
           ))}
+
+          {error && <p role="alert" className="text-xs text-red-600">{error}</p>}
 
           <button
             type="submit"
@@ -83,8 +70,7 @@ const SignUp = () => {
             Log In
           </Link>
         </p>
-      </div>
-    </div>
+    </AuthLayout>
   );
 };
 

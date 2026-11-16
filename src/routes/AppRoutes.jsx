@@ -9,6 +9,13 @@ import Facilities from '../pages/facilities/Facilities';
 import Rides from '../pages/rides/Rides';
 import Contact from '../pages/contact/Contact';
 import SignUp from '../pages/auth/component/SignUp';
+import LoginPage from '../pages/auth/LoginPage';
+import ForgotPasswordPage from '../pages/auth/ForgotPasswordPage';
+import VerificationCodePage from '../pages/auth/VerificationCodePage';
+import NewPasswordPage from '../pages/auth/NewPasswordPage';
+import MyBookings from '../pages/MyBookings';
+import ProfileSettings from '../pages/ProfileSettings';
+import AuthProvider from '../features/auth/AuthProvider';
 import CheckAvailabilityForm from '../features/booking/CheckAvailabilityForm';
 import ScrollToTop from '../components/common/ScrollToTop';
 
@@ -35,12 +42,15 @@ const router = createBrowserRouter([
           { path: 'rides', element: <Rides /> },
           { path: 'contact', element: <Contact /> },
           { path: 'checkout', element: <CheckAvailabilityForm /> },
+          { path: 'my-bookings', element: <MyBookings /> },
+          { path: 'profile-settings', element: <ProfileSettings /> },
         ],
       },
-      {
-        path: '/signup',
-        element: <SignUp />,
-      },
+      { path: '/signup', element: <SignUp /> },
+      { path: '/login', element: <LoginPage /> },
+      { path: '/forgot-password', element: <ForgotPasswordPage /> },
+      { path: '/verify-code', element: <VerificationCodePage /> },
+      { path: '/new-password', element: <NewPasswordPage /> },
     ],
   },
 ]);
@@ -49,4 +59,10 @@ const AppRoutes = () => {
   return <RouterProvider router={router} />;
 };
 
-export default AppRoutes;
+const AppRoutesWithAuth = () => (
+  <AuthProvider>
+    <AppRoutes />
+  </AuthProvider>
+);
+
+export default AppRoutesWithAuth;

@@ -1,7 +1,8 @@
 const CustomInputField = ({ label, name, type = 'text', placeholder, value, onChange, required = true }) => (
     <div>
-        <label className="block text-xs font-medium text-[#333] mb-1.5">{label}</label>
+        <label htmlFor={name} className="mb-1.5 block text-xs font-medium text-[#333]">{label}</label>
         <input
+            id={name}
             name={name}
             type={type}
             required={required}
