@@ -45,7 +45,7 @@ const RoomDetailsModal = ({ room, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-[2px] p-4 md:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/50 p-4 backdrop-blur-sm md:p-6"
       onClick={onClose}
     >
       <div
@@ -53,7 +53,7 @@ const RoomDetailsModal = ({ room, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-6 md:px-8 py-4 border-b border-[#ECEEE9]">
-          <h3 className="text-[16px] md:text-[18px] font-medium text-[#111111]">
+          <h3 className="text-base font-medium text-[#111111] md:text-lg">
             Room Information
           </h3>
           <button
@@ -68,23 +68,23 @@ const RoomDetailsModal = ({ room, onClose }) => {
         <div className="p-6 md:p-8 max-h-[85vh] overflow-y-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-8">
-              <h2 className="font-serif text-3xl md:text-[36px] text-[#111111] font-normal leading-tight mb-2">
+              <h2 className="mb-2 font-serif text-3xl font-normal leading-tight text-[#111111] md:text-4xl">
                 {room.title || 'Deluxe Room'}
               </h2>
-              <p className="text-[#666666] text-[13px] leading-relaxed mb-6">
+              <p className="mb-6 text-sm leading-relaxed text-[#666666]">
                 {room.description ||
                   'Enjoy a refreshing weekend with your loved ones at our resort. Experience comfortable accommodation, delicious meals, fun-filled activities, and quality family time surrounded by beautiful natural scenery.'}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 mb-6">
-                <div className="sm:col-span-7 h-[220px] md:h-[245px] rounded-xl overflow-hidden bg-[#F3F3F3]">
+                <div className="h-56 overflow-hidden rounded-xl bg-[#F3F3F3] sm:col-span-7 md:h-60">
                   <img
                     src={room.image}
                     alt={room.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="sm:col-span-5 grid grid-cols-2 gap-3 h-[220px] md:h-[245px]">
+                <div className="grid h-56 grid-cols-2 gap-3 sm:col-span-5 md:h-60">
                   {[0, 1, 2, 3].map((idx) => (
                     <div
                       key={idx}
@@ -104,45 +104,45 @@ const RoomDetailsModal = ({ room, onClose }) => {
 
               <div className="border-t border-b border-[#ECEEE9] py-5 mb-6 grid grid-cols-2 sm:grid-cols-4 gap-y-5 gap-x-4">
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Maximum Adults</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.maxAdults || '02 people'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Maximum Adults</p>
+                  <p className="text-base font-medium text-[#111111]">{room.maxAdults || '02 people'}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Maximum Children</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.maxChildren || '02 kids'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Maximum Children</p>
+                  <p className="text-base font-medium text-[#111111]">{room.maxChildren || '02 kids'}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Check-In</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.checkIn || '11.30am'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Check-In</p>
+                  <p className="text-base font-medium text-[#111111]">{room.checkIn || '11.30am'}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Check-Out</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.checkOut || '10.00am'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Check-Out</p>
+                  <p className="text-base font-medium text-[#111111]">{room.checkOut || '10.00am'}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Bed Type</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.bedType || 'King Bed'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Bed Type</p>
+                  <p className="text-base font-medium text-[#111111]">{room.bedType || 'King Bed'}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Number of Beds</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.numberOfBeds || '02 Beds'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Number of Beds</p>
+                  <p className="text-base font-medium text-[#111111]">{room.numberOfBeds || '02 Beds'}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Room Size</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.roomSize || '350sqf'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Room Size</p>
+                  <p className="text-base font-medium text-[#111111]">{room.roomSize || '350sqf'}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] text-[#888888] mb-0.5">Meal Select</p>
-                  <p className="text-[15px] font-medium text-[#111111]">{room.meal || 'Breakfast'}</p>
+                  <p className="mb-0.5 text-xs text-[#888888]">Meal Select</p>
+                  <p className="text-base font-medium text-[#111111]">{room.meal || 'Breakfast'}</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div>
-                  <p className="text-[12px] text-[#888888] mb-3">Activities Included</p>
+                  <p className="mb-3 text-xs text-[#888888]">Activities Included</p>
                   <ul className="space-y-2.5">
                     {activitiesCol1.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-[13px] text-[#222222]">
+                      <li key={index} className="flex items-center gap-2 text-sm text-[#222222]">
                         <CheckCircle2 className="w-4 h-4 text-[#22C55E] shrink-0" />
                         <span>{item}</span>
                       </li>
@@ -150,10 +150,10 @@ const RoomDetailsModal = ({ room, onClose }) => {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-[12px] text-[#888888] mb-3">Activities Included</p>
+                  <p className="mb-3 text-xs text-[#888888]">Activities Included</p>
                   <ul className="space-y-2.5">
                     {activitiesCol2.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-[13px] text-[#222222]">
+                      <li key={index} className="flex items-center gap-2 text-sm text-[#222222]">
                         <CheckCircle2 className="w-4 h-4 text-[#22C55E] shrink-0" />
                         <span>{item}</span>
                       </li>
@@ -161,10 +161,10 @@ const RoomDetailsModal = ({ room, onClose }) => {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-[12px] text-[#888888] mb-3">Additional Services</p>
+                  <p className="mb-3 text-xs text-[#888888]">Additional Services</p>
                   <ul className="space-y-2.5">
                     {additionalServices.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-[13px] text-[#222222]">
+                      <li key={index} className="flex items-center gap-2 text-sm text-[#222222]">
                         <CheckCircle2 className="w-4 h-4 text-[#22C55E] shrink-0" />
                         <span>{item}</span>
                       </li>
@@ -177,9 +177,9 @@ const RoomDetailsModal = ({ room, onClose }) => {
             <div className="lg:col-span-4">
               <div className="bg-[#F7F7F7] rounded-2xl overflow-hidden border border-[#ECEEE9]">
                 <div className="px-5 py-4">
-                  <h4 className="text-[15px] font-medium text-[#111111]">Room No &amp; Pricing</h4>
+                  <h4 className="text-base font-medium text-[#111111]">Room No &amp; Pricing</h4>
                 </div>
-                <div className="bg-[#E5E5E5] px-5 py-2.5 grid grid-cols-3 text-[11px] font-medium text-[#777777]">
+                <div className="grid grid-cols-3 bg-[#E5E5E5] px-5 py-2.5 text-xs font-medium text-[#777777]">
                   <span>Room No</span>
                   <span>Room View</span>
                   <span className="text-right">Total Price</span>
@@ -192,7 +192,7 @@ const RoomDetailsModal = ({ room, onClose }) => {
                         key={item.roomNo}
                         type="button"
                         onClick={() => setSelectedRoomNo(item.roomNo)}
-                        className={`w-full px-5 py-3.5 grid grid-cols-3 text-left text-[13px] transition-colors cursor-pointer ${
+                        className={`grid w-full cursor-pointer grid-cols-3 px-5 py-3.5 text-left text-sm transition-colors ${
                           isSelected
                             ? 'bg-[#18392B]/10 font-medium text-[#18392B]'
                             : 'hover:bg-white/70 text-[#222222]'
@@ -213,7 +213,7 @@ const RoomDetailsModal = ({ room, onClose }) => {
             <button
               type="button"
               onClick={handleConfirmBooking}
-              className="w-full bg-[#18392B] hover:bg-[#122b20] text-white text-[15px] font-medium py-3.5 rounded-xl transition-colors cursor-pointer"
+              className="w-full cursor-pointer rounded-xl bg-[#18392B] py-3.5 text-base font-medium text-white transition-colors hover:bg-[#122b20]"
             >
               Book Now
             </button>

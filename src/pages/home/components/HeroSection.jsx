@@ -4,7 +4,7 @@ import heroBanner from "../../../assets/images/hotelPrinceBanner .jpg";
 const HeroSection = () => {
   return (
     <section
-      className="relative min-h-screen bg-cover bg-center flex flex-col justify-between pt-36 pb-12 px-4 sm:px-8 md:px-16"
+      className="relative min-h-screen overflow-visible bg-cover bg-center flex flex-col justify-between px-4 pt-32 pb-12 sm:px-8 md:px-16 md:pt-36"
       style={{ backgroundImage: `url(${heroBanner})` }}
     >
       {/* Dark Overlay */}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import PackageCard from './PackageCard';
+import SectionHeader from '../../components/common/SectionHeader';
 
 const CATEGORIES = [
     'Family Package',
@@ -30,29 +31,22 @@ const PackagesSection = () => {
     const filteredPackages = packageList.filter((pkg) => pkg.category === activeTab);
 
     return (
-        <section className="bg-white py-20 px-6 md:px-16 lg:px-24">
-            <div className="max-w-7xl mx-auto">
-
-                {/* Section Header */}
-                <div className="text-center max-w-2xl mx-auto mb-14">
-                    <p className="text-[#666666] text-sm md:text-base font-normal mb-2">
-                        Find Your Experience
-                    </p>
-                    <h2 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-[#18392B] font-normal leading-tight mb-4">
-                        Explore Our Packages
-                    </h2>
-                    <p className="text-[#666666] text-sm md:text-[15px] leading-relaxed">
-                        Choose your preferred experience and find a package that suits your stay.
-                    </p>
-                </div>
+        <section className="bg-white">
+            <div className="mx-auto container py-10 md:py-20 xl:py-16">
+                <SectionHeader
+                    subtitle="Find Your Experience"
+                    title="Explore Our Packages"
+                    description="Choose your preferred experience and find a package that suits your stay."
+                    className="mb-12 md:mb-14"
+                />
 
                 {/* Category Tabs */}
-                <div className="flex items-center gap-7 md:gap-9 border-b border-[#E2E4DF] mb-8 overflow-x-auto">
+                <div className="mx-auto mb-12 flex w-full max-w-360 items-center gap-7 overflow-x-auto border-b border-[#E2E4DF] md:mb-14 md:gap-9">
                     {CATEGORIES.map((category) => (
                         <button
                             key={category}
                             onClick={() => setActiveTab(category)}
-                            className={`pb-3 text-[15px] whitespace-nowrap transition-all duration-200 border-b-2 ${
+                            className={`pb-3 text-base whitespace-nowrap transition-all duration-200 border-b-2 ${
                                 activeTab === category
                                     ? 'border-[#18392B] text-[#111111] font-medium'
                                     : 'border-transparent text-[#7D827E] hover:text-[#111111] font-normal'
@@ -65,7 +59,7 @@ const PackagesSection = () => {
 
                 {/* Loading Skeleton */}
                 {isLoading && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
                         {[...Array(6)].map((_, index) => (
                             <div
                                 key={index}
@@ -91,7 +85,7 @@ const PackagesSection = () => {
                 {!isLoading && !isError && (
                     <>
                         {filteredPackages.length > 0 ? (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
+                            <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
                                 {filteredPackages.map((pkg) => (
                                     <PackageCard key={pkg.id} pkg={pkg} />
                                 ))}

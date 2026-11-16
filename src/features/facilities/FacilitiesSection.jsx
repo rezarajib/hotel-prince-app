@@ -138,29 +138,14 @@ const facilitiesData = [
 
 const FacilitiesSection = () => {
   return (
-    <section className="bg-white py-20 px-6 md:px-16 lg:px-24">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-[#666666] text-sm md:text-base font-normal mb-2">
-            Our Facilities
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-[#18392B] font-normal leading-tight mb-4">
-            Everything You Need for a Perfect Stay
-          </h2>
-          <p className="text-[#666666] text-sm md:text-[15px] leading-relaxed">
-            Enjoy a seamless and comfortable stay with thoughtfully curated facilities designed to
-            make every moment relaxing, convenient, and memorable.
-          </p>
-        </div>
-
+    <section className="bg-white">
+      <div className="mx-auto max-w-360 px-6 pt-28 pb-20 sm:px-10 md:px-16 md:pt-32 md:pb-24 lg:px-20">
         {/* 8-Card Facilities Grid (4 columns x 2 rows) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {facilitiesData.map((item) => (
             <div
               key={item.id}
-              className="bg-[#F3F3EC] rounded-[24px] p-7 flex flex-col justify-between min-h-[215px] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              className="flex h-full min-h-56 flex-col justify-between rounded-3xl bg-[#F3F3EC] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               {/* Top-Left White Icon Box */}
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-[0_1px_3px_rgba(0,0,0,0.03)] mb-10">
@@ -169,10 +154,10 @@ const FacilitiesSection = () => {
 
               {/* Bottom Title & Description */}
               <div>
-                <h3 className="font-serif text-[22px] text-[#18392B] font-normal leading-snug mb-1.5">
+                <h3 className="mb-1.5 font-serif text-2xl font-normal leading-snug text-[#18392B]">
                   {item.title}
                 </h3>
-                <p className="text-[12px] text-[#7D827E] leading-relaxed">
+                <p className="text-xs leading-relaxed text-[#7D827E]">
                   {item.description}
                 </p>
               </div>

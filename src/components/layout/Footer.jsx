@@ -1,4 +1,5 @@
 import { Building2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -70,7 +71,7 @@ const Footer = () => {
             <div>
               <h4 className="font-serif text-xl text-[#111111] font-medium mb-4">Services</h4>
               <ul className="space-y-3 text-sm text-[#555555]">
-                <li><a href="#rooms" className="hover:text-[#111111] transition-colors">Browse Rooms</a></li>
+                <li><Link to="/rooms" className="hover:text-[#111111] transition-colors">Browse Rooms</Link></li>
                 <li><a href="#packages" className="hover:text-[#111111] transition-colors">Browse Packages</a></li>
                 <li><a href="#events" className="hover:text-[#111111] transition-colors">Browse Events</a></li>
                 <li><a href="#menu" className="hover:text-[#111111] transition-colors">Restaurant & Menu</a></li>

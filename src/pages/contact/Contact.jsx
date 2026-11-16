@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <div className="bg-white">
       {/* Contact Hero & Enquiry Form Section */}
-      <section className="bg-[#F4F5EE] pt-28 pb-20 px-6 md:px-16">
+      <section className="overflow-visible bg-[#F4F5EE] px-6 pt-32 pb-20 md:px-16 md:pt-36">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-[#666] text-xs md:text-sm mb-2">Hotel Prince</p>
           <h1 className="font-serif text-4xl md:text-[56px] text-[#18392B] leading-tight mb-3">

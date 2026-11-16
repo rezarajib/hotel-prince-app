@@ -1,7 +1,8 @@
 
 import { useQuery } from '@tanstack/react-query';
-import CommonListingCard from '../../components/common/CommonListingCard';
 import { useState } from 'react';
+import RoomCard from './RoomCard';
+import SectionHeader from '../../components/common/SectionHeader';
 
 const CATEGORIES = ['Hotel Room', 'Cottage', 'Villa', 'Tent', 'Cabin'];
 
@@ -32,31 +33,23 @@ const RoomsSection = () => {
     const filteredRooms = roomList.filter((room) => room.category === activeTab);
 
     return (
-        <section className="bg-white pt-6 md:pt-8 pb-20 md:pb-24 px-6 md:px-16 lg:px-24">
-            <div className="max-w-7xl mx-auto">
-
-                {/* Section Header */}
-                <div className="text-center max-w-2xl mx-auto mb-3">
-                    <p className="text-[#666666] text-xs md:text-sm font-normal mb-1">
-                        Book Your Stay
-                    </p>
-                    <h2 className="font-serif text-3xl md:text-4xl lg:text-[46px] text-[#18392B] font-normal leading-tight mb-2">
-                        Find Your Perfect Stay
-                    </h2>
-                    <p className="text-[#666666] text-xs md:text-[14px] leading-relaxed">
-                        Discover comfort, elegance, and exceptional hospitality. Reserve your
-                        ideal room for a memorable stay at Hotel Prince.
-                    </p>
-                </div>
+        <section className="bg-[#F4F5EE]">
+            <div className="mx-auto max-w-360 px-6 pt-28 pb-20 sm:px-10 md:px-16 md:pt-32 md:pb-24 lg:px-20">
+                <SectionHeader
+                    subtitle="Book Your Stay"
+                    title="Find Your Perfect Stay"
+                    description="Discover comfort, elegance, and exceptional hospitality. Reserve your ideal room for a memorable stay at Hotel Prince."
+                    className="mb-12 md:mb-14"
+                />
 
                 {/* Category Tabs */}
-                <div className="flex items-center gap-7 md:gap-9 border-b border-[#E2E4DF] mb-5 overflow-x-auto">
+                <div className="mx-auto mb-12 flex w-full max-w-360 items-center gap-7 overflow-x-auto border-b border-[#E2E4DF] md:mb-14 md:gap-9">
                     {CATEGORIES.map((category) => (
                         <button
                             key={category}
                             type="button"
                             onClick={() => setActiveTab(category)}
-                            className={`pb-2 text-[15px] whitespace-nowrap transition-all duration-200 border-b-2 focus:outline-none cursor-pointer ${
+                            className={`pb-2 text-base whitespace-nowrap transition-all duration-200 border-b-2 focus:outline-none cursor-pointer ${
                                 activeTab === category
                                     ? 'border-[#18392B] text-[#111111] font-medium'
                                     : 'border-transparent text-[#7D827E] hover:text-[#111111] font-normal'
@@ -69,7 +62,7 @@ const RoomsSection = () => {
 
                 {/* Loading Skeleton */}
                 {isLoading && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
                         {[...Array(8)].map((_, index) => (
                             <div
                                 key={index}
@@ -96,11 +89,11 @@ const RoomsSection = () => {
                     </div>
                 )}
 
-                {/* Rooms Grid (CommonListingCard ব্যবহার করা হয়েছে) */}
+                {/* Rooms Grid */}
                 {!isLoading && !isError && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
                         {filteredRooms.map((room) => (
-                            <CommonListingCard key={room.id} item={room} />
+                            <RoomCard key={room.id} room={room} />
                         ))}
                     </div>
                 )}
