@@ -1,4 +1,3 @@
-import CheckAvailabilityForm from "../../../features/booking/CheckAvailabilityForm";
 import heroBanner from "../../../assets/images/hotelPrinceBanner .jpg";
 
 const HeroSection = () => {
@@ -25,11 +24,6 @@ const HeroSection = () => {
           Thoughtful comforts. Timeless hospitality. Welcome to your own kind of wonderful.
         </p>
       </article>
-
-      {/* Booking Form Box */}
-      <div className="relative z-10 w-full mt-24 md:mt-32">
-        <CheckAvailabilityForm />
-      </div>
     </section>
   );
 };
