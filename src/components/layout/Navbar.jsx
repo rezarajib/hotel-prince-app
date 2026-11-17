@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from 'react';
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarDays, ChevronDown, LogOut, Menu, Settings, UserRound, X } from 'lucide-react';
 import logoImg from '../../assets/hotel-logo 1.png';
-import CustomButton from '../common/Button';
 import { AuthContext } from '../../features/auth/AuthContext';
 
 const Navbar = () => {
@@ -135,6 +134,7 @@ const Navbar = () => {
         {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
+      {/* Desktop Auth Button (Login / Signup আলাদা লিংক) */}
       <div className="relative hidden sm:block">
         {user ? (
           <>
@@ -182,12 +182,19 @@ const Navbar = () => {
             )}
           </>
         ) : (
-          <Link to="/login">
-            <CustomButton>Login / Signup</CustomButton>
-          </Link>
+          <div className="inline-flex items-center rounded-xl bg-[#FFA300] px-5 py-2.5 font-['Sora',sans-serif] text-sm font-semibold text-gray-900 shadow-sm transition-colors hover:bg-[#e69300]">
+            <Link to="/login" className="hover:underline">
+              Login
+            </Link>
+            <span className="mx-1.5">/</span>
+            <Link to="/signup" className="hover:underline">
+              Signup
+            </Link>
+          </div>
         )}
       </div>
 
+      {/* Mobile Navigation */}
       <nav
         id="mobile-navigation"
         className={`absolute left-0 top-full w-full flex-col gap-1 bg-[#F3F2EB] px-6 pb-4 pt-2 shadow-md lg:hidden ${
@@ -235,13 +242,23 @@ const Navbar = () => {
             </button>
           </>
         ) : (
-          <Link
-            to="/login"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-2 rounded-lg bg-[#FFA300] px-3 py-2.5 text-center font-['Sora',sans-serif] text-sm font-semibold text-gray-900"
-          >
-            Login / Signup
-          </Link>
+          <div className="mt-2 flex items-center justify-center rounded-lg bg-[#FFA300] px-3 py-2.5 font-['Sora',sans-serif] text-sm font-semibold text-gray-900">
+            <Link
+              to="/login"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="hover:underline"
+            >
+              Login
+            </Link>
+            <span className="mx-1.5">/</span>
+            <Link
+              to="/signup"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="hover:underline"
+            >
+              Signup
+            </Link>
+          </div>
         )}
       </nav>
     </header>
