@@ -92,7 +92,20 @@ const Navbar = () => {
     >
       {/* Brand Logo & Name */}
       <Link to="/" className="flex items-center gap-3 shrink-0">
-        <img src={logoImg} alt="Hotel Prince Logo" className="w-8 h-8 object-contain" />
+        <span
+          aria-hidden="true"
+          className={`h-8 w-8 ${isDarkText ? 'bg-[#1E3E34]' : 'bg-white'}`}
+          style={{
+            WebkitMaskImage: `url("${logoImg}")`,
+            maskImage: `url("${logoImg}")`,
+            WebkitMaskRepeat: 'no-repeat',
+            maskRepeat: 'no-repeat',
+            WebkitMaskPosition: 'center',
+            maskPosition: 'center',
+            WebkitMaskSize: 'contain',
+            maskSize: 'contain',
+          }}
+        />
 
         <div className="flex flex-col justify-center">
           <h1 className="text-[#FFA300] text-[22px] font-bold leading-none">
