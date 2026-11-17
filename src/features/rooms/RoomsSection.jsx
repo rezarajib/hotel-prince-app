@@ -34,7 +34,7 @@ const RoomsSection = () => {
 
     return (
         <section className="bg-[#F4F5EE]">
-            <div className="mx-auto max-w-360 px-6 pt-28 pb-20 sm:px-10 md:px-16 md:pt-32 md:pb-24 lg:px-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <SectionHeader
                     subtitle="Book Your Stay"
                     title="Find Your Perfect Stay"
