@@ -18,6 +18,7 @@ import ProfileSettings from '../pages/ProfileSettings';
 import AuthProvider from '../features/auth/AuthProvider';
 import CheckAvailabilityForm from '../features/booking/CheckAvailabilityForm';
 import ScrollToTop from '../components/common/ScrollToTop';
+import NotFound from '../pages/not-found/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
       { path: '/forgot-password', element: <ForgotPasswordPage /> },
       { path: '/verify-code', element: <VerificationCodePage /> },
       { path: '/new-password', element: <NewPasswordPage /> },
+      { path: '*', element: <NotFound /> },
     ],
   },
 ]);
