@@ -1,4 +1,3 @@
-
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import RoomCard from './RoomCard';
@@ -33,7 +32,7 @@ const RoomsSection = () => {
     const filteredRooms = roomList.filter((room) => room.category === activeTab);
 
     return (
-        <section className="bg-[#F4F5EE]">
+        <section className="bg-stone-100 py-16 md:py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <SectionHeader
                     subtitle="Book Your Stay"
@@ -43,7 +42,7 @@ const RoomsSection = () => {
                 />
 
                 {/* Category Tabs */}
-                <div className="mx-auto mb-12 flex w-full max-w-360 items-center gap-7 overflow-x-auto border-b border-[#E2E4DF] md:mb-14 md:gap-9">
+                <div className="mx-auto mb-12 flex w-full max-w-360 items-center gap-7 overflow-x-auto border-b border-stone-200 md:mb-14 md:gap-9">
                     {CATEGORIES.map((category) => (
                         <button
                             key={category}
@@ -51,8 +50,8 @@ const RoomsSection = () => {
                             onClick={() => setActiveTab(category)}
                             className={`pb-2 text-base whitespace-nowrap transition-all duration-200 border-b-2 focus:outline-none cursor-pointer ${
                                 activeTab === category
-                                    ? 'border-[#18392B] text-[#111111] font-medium'
-                                    : 'border-transparent text-[#7D827E] hover:text-[#111111] font-normal'
+                                    ? 'border-emerald-900 text-neutral-900 font-medium'
+                                    : 'border-transparent text-stone-500 hover:text-neutral-900 font-normal'
                             }`}
                         >
                             {category}
@@ -66,12 +65,12 @@ const RoomsSection = () => {
                         {[...Array(8)].map((_, index) => (
                             <div
                                 key={index}
-                                className="bg-[#F7F8F3] rounded-2xl p-4 h-95 animate-pulse border border-[#ECEEE9]"
+                                className="bg-stone-50 rounded-2xl p-4 h-95 animate-pulse border border-stone-200/70"
                             >
-                                <div className="h-50 bg-gray-200 rounded-xl mb-4"></div>
-                                <div className="h-4 bg-gray-200 rounded w-1/3 mb-3"></div>
-                                <div className="h-6 bg-gray-200 rounded w-2/3 mb-4"></div>
-                                <div className="h-10 bg-gray-200 rounded-lg mt-auto"></div>
+                                <div className="h-50 bg-stone-200 rounded-xl mb-4"></div>
+                                <div className="h-4 bg-stone-200 rounded w-1/3 mb-3"></div>
+                                <div className="h-6 bg-stone-200 rounded w-2/3 mb-4"></div>
+                                <div className="h-10 bg-stone-200 rounded-lg mt-auto"></div>
                             </div>
                         ))}
                     </div>
@@ -83,7 +82,7 @@ const RoomsSection = () => {
                         <p className="text-red-600 font-medium mb-1">
                             ({error?.message})
                         </p>
-                        <p className="text-gray-500 text-sm">
+                        <p className="text-stone-500 text-sm">
                             <strong>public/data/rooms.json</strong>
                         </p>
                     </div>
