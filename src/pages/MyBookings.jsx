@@ -36,7 +36,7 @@ const MyBookings = () => {
         title="My Bookings"
         description="View and manage all your bookings, track their status, and stay updated on your upcoming visits."
       />
-      <section className="mx-auto -mt-2 max-w-[1440px] px-4 md:px-8 lg:px-16">
+      <section className="mx-auto -mt-2 max-w-360 px-4 md:px-8 lg:px-16">
         <div className="mb-6 flex flex-wrap justify-center gap-3">
           {bookingTabs.map((tab) => (
             <button
@@ -85,7 +85,7 @@ const MyBookings = () => {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[1050px] border-collapse text-left text-sm">
+            <table className="w-full min-w-262.5 border-collapse text-left text-sm">
               <thead>
                 <tr className="border-b border-[#EAEAEA] text-xs font-medium uppercase tracking-wide text-[#777]">
                   {['Image', 'Booking Id', 'Booking Date', 'Room Type', 'Room Number', 'Check-In', 'Check-Out', 'Guests', 'Actions'].map((column) => (
