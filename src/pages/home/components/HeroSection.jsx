@@ -10,17 +10,25 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/45 z-0" />
 
       {/* Hero Article Content (Exact Figma Style) */}
-      <article className="relative z-10 max-w-296.25 mx-auto text-center text-white my-auto pt-16">
-        <p className="font-['Sora',sans-serif] text-xs md:text-sm uppercase tracking-[0.25em] text-gray-200 font-normal mb-3">
+      <article className="relative z-10 w-full max-w-7xl mx-auto text-center text-white my-auto pt-16">
+        <p className="font-sans text-base md:text-xl font-normal uppercase tracking-normal leading-normal md:leading-22.5 text-center text-white/90">
           THE ART OF FEELING AT HOME
         </p>
 
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[74px] font-normal uppercase tracking-wide leading-[1.12] mb-4">
-          A LITTLE ESCAPE. <br />
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal uppercase tracking-tight leading-tight lg:leading-28.5 mb-5">
+          A LITTLE{" "}
+          <span className="relative inline-block px-2">
+            <span
+              className="absolute inset-0 bg-sky-900/50 -z-10"
+              aria-hidden="true"
+            />
+            ESCAPE
+          </span>
+          . <br className="hidden md:block" />
           AN EXTRAORDINARY STAY.
         </h1>
 
-        <p className="font-['Sora',sans-serif] text-sm md:text-base text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
+        <p className="font-sans text-base md:text-xl font-normal tracking-normal leading-relaxed md:leading-22.5 text-center text-neutral-300 max-w-210.5 mx-auto">
           Thoughtful comforts. Timeless hospitality. Welcome to your own kind of wonderful.
         </p>
       </article>
